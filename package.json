@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:host": "python host.py dev",
     "build": "next build",
     "start": "next start",
+    "start:host": "python host.py start",
     "lint": "next lint"
   },
   "dependencies": {
