@@ -1,0 +1,7 @@
+psutil
+socket
+time
+curses
+keyboard
+subprocess
+sys
