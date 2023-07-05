@@ -19,6 +19,7 @@ def get_network_interfaces():
 
 def select_interface(stdscr, interfaces):
     current_row = 0
+    indexes = [str(index + 1) for index in range(len(interfaces))]
 
     curses.cbreak()
     curses.noecho()
@@ -32,11 +33,11 @@ def select_interface(stdscr, interfaces):
             if index == current_row:
                 stdscr.attron(curses.color_pair(1))
                 stdscr.addstr(
-                    f"{index}. {interface}: {get_ip_address(interfaces[index])}\n")
+                    f"{index + 1}. {interface}: {get_ip_address(interfaces[index])}\n")
                 stdscr.attroff(curses.color_pair(1))
             else:
                 stdscr.addstr(
-                    f"{index}. {interface}: {get_ip_address(interfaces[index])}\n")
+                    f"{index + 1}. {interface}: {get_ip_address(interfaces[index])}\n")
 
         stdscr.refresh()
 
@@ -51,6 +52,9 @@ def select_interface(stdscr, interfaces):
         # Navega para baixo
         elif key == "down" and current_row < len(interfaces) - 1:
             current_row += 1
+        # Seleciona a opção atual
+        elif key in indexes:
+            current_row = int(key) - 1
         # Seleciona a opção atual
         elif key == "enter":
             break
