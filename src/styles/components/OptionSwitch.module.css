@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 2.4rem;
+  align-items: center;
+}
+
+.container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container p {
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  line-height: 0.1;
+}
+
+.checkmark {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+
+  top: calc(50% - 1.3rem);
+  right: 0;
+  width: 5.5rem;
+  height: 2.6rem;
+  background-color: var(--gray-light);
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5rem;
+}
+
+.container .label {
+  user-select: none;
+  margin-left: calc(7.4rem + 1rem);
+}
+
+.container .checkmark:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  border-radius: 5rem;
+
+  background-color: var(--gray);
+  box-shadow: 1.2rem 0 10px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+.container input:checked + .checkmark:before {
+  transform: translateX(100%);
+  background: var(--green-bg);
+  box-shadow: -1.2rem 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.container input:checked + .checkmark {
+  background: var(--green-de);
+}
+
+.moon {
+  mask: url(/icons/moon.svg) no-repeat center;
+  -webkit-mask: url(/icons/moon.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.notification {
+  mask: url(/icons/notification.svg) no-repeat center;
+  -webkit-mask: url(/icons/notification.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.moon,
+.notification {
+  background-color: var(--black);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+}

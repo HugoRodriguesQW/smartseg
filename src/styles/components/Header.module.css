@@ -1,0 +1,57 @@
+.container {
+  width: 100vw;
+  justify-content: center;
+  background: var(--white);
+  padding: 3rem 4.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.gap {
+  height: 10.7rem;
+}
+
+.container,
+.headerContent,
+.headerBar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.headerContent {
+  width: 100%;
+
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.logo {
+  height: 4.7rem;
+}
+
+.headerBar {
+  gap: 2.6rem;
+}
+
+@media screen and (max-width: 780px) {
+  .headerBar {
+    flex-direction: column;
+  }
+
+  .gap {
+    height: 18rem;
+  }
+
+  .headerContent {
+    position: relative;
+  }
+
+  .userBubbleContainer {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

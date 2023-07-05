@@ -1,0 +1,257 @@
+.container {
+  z-index: 777;
+  position: relative;
+  width: 4.7rem;
+  height: 4.7rem;
+  transition: 0.2s;
+}
+
+.container:not(.active) .contentFrame > *:not(.profileFrame) {
+  opacity: 0;
+}
+
+.container:not(.active) .profileFrame > *:not(.profileImageFrame) {
+  opacity: 0;
+}
+
+.content {
+  transition: 0.2s;
+  min-height: 4.7rem;
+  width: 4.7rem;
+  height: 4.7rem;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container.active .profileImageFrame {
+  width: 6.9rem;
+  height: 6.9rem;
+}
+
+.container.active .content {
+  width: 34.4rem;
+  padding: 0.8rem;
+
+  height: auto;
+  background: var(--gray-light);
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.17);
+}
+
+.overlay.active {
+  background: rgba(255, 255, 255, 0.43);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 776;
+}
+
+.container.active .contentFrame {
+  background: var(--white, #fff);
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 0.8rem;
+  padding: 2.2rem 0;
+
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.2s;
+}
+
+.container.active .contentFrame > *:not(.settingsFrame) {
+  padding: 0 2.2rem;
+}
+
+.profileImageFrame {
+  width: 4.7rem;
+  height: 4.7rem;
+  flex-shrink: 0;
+
+  border-radius: 4.7rem;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: inherit;
+}
+
+@keyframes desappear-left {
+  from {
+    width: 200%;
+    border: 1px solid var(--green);
+  }
+
+  to {
+    width: 0;
+    border: 1px solid transparent;
+  }
+}
+
+.container:not(.active) .profileImageFrame {
+  cursor: pointer;
+}
+
+.profileFrame {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 4.7rem;
+  margin-bottom: min(2rem, 5rem);
+}
+
+.defaultProfileImage {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--black);
+  -webkit-mask: url(/icons/user.svg) no-repeat center;
+  mask: url(/icons/user.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.bottomFrame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+}
+
+.identifierFrame .name {
+  font-size: 1.8rem;
+}
+
+.identifierFrame .type {
+  font-size: 1.2rem;
+  color: var(--gray, #5f6368);
+}
+
+.helpButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.helpButton:hover .helpIcon {
+  background: var(--green-bg);
+}
+.helpButton:hover > p {
+  color: var(--green-bg);
+}
+
+.helpIcon {
+  transition: 0.13s;
+  display: block;
+  background: var(--black);
+  width: 2.4rem;
+  height: 2.4rem;
+
+  mask: url(/icons/help.svg) no-repeat center;
+  -webkit-mask: url(/icons/help.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.helpButton > p {
+  font-size: 1.2rem;
+  transition: 0.13s;
+  height: 1.55rem;
+}
+
+.exitButton {
+  background: var(--red-bg, #ff4545);
+}
+
+.settingsFrame {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.settingsFrame > * {
+  height: 4.7rem;
+  margin: 0 2.2rem;
+}
+
+.settingsFrame > a:hover {
+  background: var(--gray-light, #f1f3f4);
+}
+
+.profileSettingFrame {
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  line-height: 0.1;
+  cursor: pointer;
+  margin: 0;
+  padding: 2rem;
+}
+
+.profileSettingIcon {
+  background: var(--black);
+  width: 2.4rem;
+  height: 2.4rem;
+
+  mask: url(/icons/user-f.svg) no-repeat center;
+  -webkit-mask: url(/icons/user-f.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+/* Experimental */
+@media screen and (max-width: 0) {
+  .container.active .content {
+    position: fixed;
+
+    right: 0;
+    top: 0;
+    width: 100vw;
+
+    height: fit-content;
+    padding: 0;
+    padding-bottom: 0.8rem;
+    border-radius: 0 0 0.8rem 0.8rem;
+  }
+
+  .container.active .contentFrame {
+    min-height: 40vh;
+    max-height: 70vh;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+    gap: 4rem;
+  }
+}
+
+@keyframes pushup {
+  from {
+    transform: translateY(-100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
