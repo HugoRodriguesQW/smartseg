@@ -51,7 +51,7 @@
       max-height: 11rem;
     }
 
-    .container a {
+    .container .item {
         min-height: 100%;
         align-items: center;
         justify-content: center;
