@@ -11,6 +11,8 @@
   --green-bg: #23c615;
   --green-de: #e8feee;
   --orange: #ffa800;
+  --white-panel: 0px 0px 6px 0px rgba(0, 0, 0, 0.17);
+  --white-panel-deep: 1.2rem 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -84,6 +86,32 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.i-home,
+.i-group,
+.i-layer {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--black);
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.i-home {
+  mask: url(/icons/home.svg) no-repeat center;
+  -webkit-mask: url(/icons/home.svg) no-repeat center;
+}
+
+.i-layer {
+  mask: url(/icons/layer.svg) no-repeat center;
+  -webkit-mask: url(/icons/layer.svg) no-repeat center;
+}
+
+.i-group {
+  mask: url(/icons/group.svg) no-repeat center;
+  -webkit-mask: url(/icons/group.svg) no-repeat center;
 }
 
 @media screen and (max-width: 465px) {

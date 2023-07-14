@@ -51,14 +51,14 @@
   border-radius: 5rem;
 
   background-color: var(--gray);
-  box-shadow: 1.2rem 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: var(--white-panel-deep);
   transition: 0.4s;
 }
 
 .container input:checked + .checkmark:before {
   transform: translateX(100%);
   background: var(--green-bg);
-  box-shadow: -1.2rem 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: var(--white-panel-deep);
 }
 
 .container input:checked + .checkmark {

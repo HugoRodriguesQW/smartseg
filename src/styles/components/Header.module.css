@@ -9,7 +9,7 @@
 }
 
 .gap {
-  height: 10.7rem;
+  padding-top: 14.3rem;
 }
 
 .container,
@@ -33,6 +33,64 @@
 
 .headerBar {
   gap: 2.6rem;
+
+}
+
+.back,
+.hiddenback {
+  border-radius: 50rem;
+  width: 4.7rem;
+  height: 4.7rem;
+  min-width: 0;
+  min-height: 0;
+  background: transparent;
+  transition: 0.18s;
+  animation: 0.3s left-to-right ease-in-out;
+}
+
+.back:hover {
+  background: var(--gray-light);
+  box-shadow: var(--white-panel);
+}
+
+.back::after {
+  content: '';
+  display: block;
+  width: 4.3rem;
+  height: 4.3rem;
+  margin: 0 auto;
+
+  background-color: var(--black);
+
+  mask: url(/icons/arrow.svg) no-repeat center;
+  -webkit-mask: url(/icons/arrow.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
+}
+
+.searchBarFrame {
+  width: 100%;
+  transition: 0.2s;
+}
+
+.hiddenback {
+  animation: 0.3s left-to-right reverse forwards ease-in-out;
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    margin-left: calc(-4.7rem - 2.6rem);
+  }
+
+  70% {
+    opacity: 0;
+    margin-left: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -41,7 +99,7 @@
   }
 
   .gap {
-    height: 18rem;
+    padding-top: 29.9rem;
   }
 
   .headerContent {
@@ -53,5 +111,13 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .back {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: 0.1s left-to-right;
   }
 }

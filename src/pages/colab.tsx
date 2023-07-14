@@ -2,8 +2,7 @@ import { SideBar } from '@/components/Sidebar'
 import { PageContainerLayout } from '@/components/PageContainerLayout'
 import Head from 'next/head'
 
-export default function Home() {
-
+export default function Colab() {
   return (
     <>
       <Head>
@@ -14,8 +13,8 @@ export default function Home() {
       </Head>
 
       <PageContainerLayout
-        sidebar={<SideBar current="/" />}
-        content={<div><p>eu sou o seu conteúdo</p></div>}
+        sidebar={<SideBar current="/colab" />}
+        content={<div><p></p></div>}
       />
     </>
   )

@@ -121,8 +121,6 @@ def main(stdscr):
 
             script = sys.argv[1]
 
-            curses.endwin()
-
             port = input(
                 stdscr, f"Digite a porta de conexão: {selected_interface}", "porta de conexão (auto)")
 
@@ -131,6 +129,7 @@ def main(stdscr):
             else:
                 command = f"npx next {script} -H {ip_address} -p 0"
 
+            curses.endwin()
             subprocess.call(command, shell=True)
         else:
             print("Não foram encontradas interfaces de rede.\n")
@@ -140,3 +139,4 @@ def main(stdscr):
 
 # Executa o programa
 curses.wrapper(main)
+exit()

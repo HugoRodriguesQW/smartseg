@@ -38,7 +38,7 @@
   height: auto;
   background: var(--gray-light);
   border-radius: 0.8rem;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: var(--white-panel);
 }
 
 .overlay.active {

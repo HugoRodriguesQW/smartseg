@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+
+.container > * {
+  flex: 1 1;
+}
+
+.container > *:last-child {
+  overflow: scroll;
+}
+
+.container *:last-child p {
+  min-height: 8000px;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
