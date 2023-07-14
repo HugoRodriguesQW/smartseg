@@ -3,7 +3,7 @@ import styles from '../styles/components/OptionSwitch.module.css'
 
 type OptionSwitchData = {
   icon: 'moon' | 'notification'
-  name: String
+  name: string
   initial: boolean | undefined
   callback: (state: boolean | undefined) => void
 }

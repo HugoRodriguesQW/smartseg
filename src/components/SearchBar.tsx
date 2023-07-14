@@ -4,7 +4,7 @@ import styles from '../styles/components/SearchBar.module.css'
 
 export function SearchBar() {
   const [active, setActive] = useState(false)
-  const [timeout, setTimeOut] = useState(setTimeout(()=> {}, 0))
+  const [timeout, setTimeOut] = useState(setTimeout(()=> {return null;}, 0))
   const [processing, setProcessing] = useState(false)
   const router = useRouter()
 

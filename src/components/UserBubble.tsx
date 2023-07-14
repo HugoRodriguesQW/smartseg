@@ -62,13 +62,13 @@ export function UserBubble({ ...rest }) {
                   name="Notificações"
                   icon="notification"
                   initial={true}
-                  callback={() => {}}
+                  callback={() => {return null}}
                 />
                 <OptionSwitch
                   name="Modo noturno"
                   icon="moon"
                   initial={false}
-                  callback={() => {}}
+                  callback={() => {return null}}
                 />
               </div>
             )}
