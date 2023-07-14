@@ -27,6 +27,8 @@
 
 .container > .item i {
     background: var(--gray);
+    width: 2.4rem;
+    height: 2.4rem;
 }
 
 .container > .item.current {
@@ -37,8 +39,6 @@
 .container > .item.current i {
     background: var(--green);
 }
-
-
 
 
 @media screen and (max-width: 780px) {
@@ -63,5 +63,11 @@
     }
   }
 
+
+  @media screen and (max-width: 300px) {
+    .container .item span {
+        display: none;
+    }
+  }
 
   

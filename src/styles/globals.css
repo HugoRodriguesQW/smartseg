@@ -95,23 +95,27 @@ input::-webkit-inner-spin-button {
   width: 2.4rem;
   height: 2.4rem;
   background-color: var(--black);
-  mask-size: contain;
-  --webkit-mask-size: contain;
 }
 
 .i-home {
   mask: url(/icons/home.svg) no-repeat center;
   -webkit-mask: url(/icons/home.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
 }
 
 .i-layer {
   mask: url(/icons/layer.svg) no-repeat center;
   -webkit-mask: url(/icons/layer.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
 }
 
 .i-group {
   mask: url(/icons/group.svg) no-repeat center;
   -webkit-mask: url(/icons/group.svg) no-repeat center;
+  mask-size: contain;
+  --webkit-mask-size: contain;
 }
 
 @media screen and (max-width: 465px) {
