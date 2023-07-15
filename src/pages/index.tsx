@@ -15,7 +15,11 @@ export default function Home() {
 
       <PageContainerLayout
         sidebar={<SideBar current="/" />}
-        content={<div><p>eu sou o seu conteúdo</p></div>}
+        content={
+          <div>
+            
+          </div>
+        }
       />
     </>
   )

@@ -3,7 +3,7 @@
   flex-direction: row;
   height: 100%;
   overflow: hidden;
-
+  gap: 4rem;
 }
 
 
@@ -13,14 +13,45 @@
 
 .container > *:last-child {
   overflow: scroll;
+  margin: 0 6.6rem;
+  padding: 1rem;
+  max-width: calc(103.3rem + 1rem);
+  
+
+  display: flex;
+  gap: 5.8rem;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
 }
 
-.container *:last-child p {
-  min-height: 8000px;
+.contentScrollBar {
+  width: 10px;
+  background-color: #f1f1f1;
 }
+
+.container > *:last-child > * {
+  overflow: visible;
+}
+
+
+
+@media screen and (min-width: 1477px) {
+  .container > *:last-child {
+    margin: 0 auto;
+  }
+}
+
 
 @media screen and (max-width: 780px) {
   .container {
+    gap: 0;
     flex-direction: column-reverse;
+  }
+
+  .container > *:last-child {
+    margin: 0 3.6rem;
+
   }
 }

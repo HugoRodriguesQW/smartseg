@@ -25,6 +25,10 @@
     transition: .18s;
 }
 
+.container > .item:active {
+    background: var(--gray-light);
+}
+
 .container > .item i {
     background: var(--gray);
     width: 2.4rem;
@@ -40,6 +44,14 @@
     background: var(--green);
 }
 
+@media screen and (max-width: 1074px) {
+    .container {
+        max-width: 7rem;
+    }
+    .container .item span {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 780px) {
     .container {
@@ -60,7 +72,19 @@
         flex: 1 1;
         padding-left: 0;
         flex-direction: column;
+        gap: 0.6rem;
     }
+
+    .container .item span {
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .container .item i {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
   }
 
 

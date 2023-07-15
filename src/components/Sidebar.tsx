@@ -7,8 +7,8 @@ type SideBarProps = {
 
 const avaliablePages = [
   { name: 'Início', host: '/', icon: 'i-home' },
-  { name: 'Treinamentos', host: '/colab', icon: 'i-layer' },
-  { name: 'Colaboradores', host: '/lessons', icon: 'i-group' },
+  { name: 'Treinamentos', host: '/lessons', icon: 'i-layer' },
+  { name: 'Colaboradores', host: '/colab', icon: 'i-group' },
 ]
 
 export function SideBar({ current }: SideBarProps) {

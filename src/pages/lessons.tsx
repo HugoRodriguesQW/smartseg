@@ -1,6 +1,7 @@
 import { SideBar } from '@/components/Sidebar'
 import { PageContainerLayout } from '@/components/PageContainerLayout'
 import Head from 'next/head'
+import { ContentBlock } from '@/components/ContentBlock'
 
 export default function Lessons() {
   return (
@@ -14,7 +15,37 @@ export default function Lessons() {
 
       <PageContainerLayout
         sidebar={<SideBar current="/lessons" />}
-        content={<div><p></p></div>}
+        content={
+        <div>
+          <ContentBlock 
+              title='Treinamentos atrasados' 
+              subtitle='Gerenciar treinamentos que já expiraram'
+              link={{to: '/', name:'Todos os treinamentos atrasados'}}>
+              <p>conteúdo</p>
+            </ContentBlock>
+
+            <ContentBlock 
+              title='Treinamentos em vencimento' 
+              subtitle='Gerenciar treinamentos que estão próximos do vencimento'
+              link={{to: '/', name:'Todos os treinamentos em vencimento'}}>
+              <p>conteúdo</p>
+            </ContentBlock>
+
+            <ContentBlock 
+              title='Treinamentos agendados' 
+              subtitle='Gerenciar treinamentos que estão agendados'
+              link={{to: '/', name:'Todos os treinamentos agendados'}}>
+              <p>conteúdo</p>
+            </ContentBlock>
+
+            <ContentBlock 
+              title='Treinamentos finalizados' 
+              subtitle='Gerenciar treinamentos que foram finalizados'
+              link={{to: '/', name:'Todos os treinamentos atrasados'}}>
+              <p>conteúdo</p>
+            </ContentBlock>
+        </div>
+        }
       />
     </>
   )

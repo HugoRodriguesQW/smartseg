@@ -1,0 +1,43 @@
+.container {
+    
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: var(--white-panel);
+}
+
+.content {
+    padding: 2.5rem 2.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.title {
+    line-height: 1;
+    font-size: 2.8rem;
+    font-family: var(--font-pontano-sans);
+}
+
+.subtitle {
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    font-family: var(--font-pontano-sans);
+}
+
+.link {
+    cursor: pointer;
+    border-top: 2px solid var(--gray-light);
+    height: 5.9rem;
+    color: var(--green);
+    font-size: 1.8rem;
+    padding-left: 2.7rem;
+    
+    display: flex;
+    align-items: center;
+    line-height: 0.1;
+    transition: 0.17s;
+}
+
+.link:active {
+    background: var(--gray-light);
+}

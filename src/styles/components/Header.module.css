@@ -10,6 +10,7 @@
 
 .gap {
   padding-top: 14.3rem;
+  transition: .17s;
 }
 
 .container,
@@ -96,15 +97,22 @@
 @media screen and (max-width: 780px) {
   .headerBar {
     flex-direction: column;
+    position: absolute;
+    top: 0;
   }
 
   .gap {
-    padding-top: 29.9rem;
+    padding-top: 18rem;
   }
+
+  .gap:has(.container.sub) {
+    padding-top: 12.3rem;
+  } 
 
   .headerContent {
     position: relative;
   }
+  
 
   .userBubbleContainer {
     float: right;
@@ -113,7 +121,8 @@
     top: 0;
   }
 
-  .back {
+  .back,
+  .hiddenback {
     float: left;
     position: absolute;
     left: 0;

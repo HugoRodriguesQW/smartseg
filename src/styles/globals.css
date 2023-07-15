@@ -70,16 +70,17 @@ input::placeholder {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
   transition: 0.2s;
   border: 0;
+
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   border: 0;
-  background: var(--gray);
+  margin: 2px;
 }
 
 input::-webkit-outer-spin-button,
@@ -120,12 +121,13 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 465px) {
   :root {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 
 @media screen and (max-width: 366px) {
   :root {
-    font-size: 6px;
-  }
+    font-size: 7px;
+  } 
+
 }

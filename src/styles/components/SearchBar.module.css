@@ -75,3 +75,9 @@
     max-width: none;
   }
 }
+
+@media screen and (max-width: 481px) {
+  .searchInput {
+    font-size: 4vw;
+  }
+}
